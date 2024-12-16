@@ -1,7 +1,12 @@
-// content.js
+chrome.storage.local.get("trackedSites", (data) => {
+  const trackedSites = data.trackedSites || [];
+  const currentUrl = window.location.href;
 
-chrome.storage.local.get("lastVisited", (data) => {
-  if (data.lastVisited) {
-    console.log("Last visited URL:", data.lastVisited);
+  const matchedSite = trackedSites.find((site) => currentUrl.includes(site));
+
+  if (matchedSite) {
+    chrome.storage.local.set({ [`lastVisited_${matchedSite}`]: currentUrl }, () => {
+      console.log(`Updated last visited for ${matchedSite}: ${currentUrl}`);
+    });
   }
 });
