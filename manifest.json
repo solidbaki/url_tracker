@@ -1,0 +1,31 @@
+{
+    "manifest_version": 3,
+    "name": "URL Tracker",
+    "description": "Track the last visited url defined, makes it easy to go back.",
+    "version": "1.0",
+    "permissions": [
+      "tabs",
+      "storage"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "js": ["content.js"],
+        "matches": ["<all_urls>"]
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icons/16.png",
+        "128": "icons/128.png"
+      }
+    },
+    "icons": {
+      "16": "icons/16.png",
+      "128": "icons/128.png"
+    }
+  }
+  
