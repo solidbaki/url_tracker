@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   padding: 10px;
   width: auto;
 }
@@ -8,12 +8,12 @@ input[type="text"] {
   padding-top: 5px;
   padding-bottom: 5px;
   margin-bottom: 10px;
-  color: blue;
+  box-sizing: border-box;
 }
 button {
   width: 100%;
   padding: 5px;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   border: none;
   cursor: pointer;
@@ -22,8 +22,8 @@ button {
 button:hover {
   background-color: #45a049;
 }
-h3{
- color: #4CAF50;
+h3 {
+  color: #4caf50;
 }
 ul {
   list-style-type: none;
